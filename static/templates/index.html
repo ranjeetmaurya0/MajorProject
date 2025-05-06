@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Video Authenticity Checker</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Upload Video</h1>
+    <input type="file" id="videoFile" accept="video/*">
+    <button onclick="uploadVideo()">Upload</button>
+    <div id="result" class="result-box" style="display:none;">
+      <h2>Video Authenticity</h2>
+      <p id="authScore">Score: --%</p>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
